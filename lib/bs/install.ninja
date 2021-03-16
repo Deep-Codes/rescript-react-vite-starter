@@ -1,0 +1,21 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o index-ReactResTest.cmi : cp ../bs/src/index-ReactResTest.cmi
+o index-ReactResTest.cmj : cp ../bs/src/index-ReactResTest.cmj
+o index-ReactResTest.cmt : cp ../bs/src/index-ReactResTest.cmt
+o index.res : cp ../../src/index.res
+o useCounterReducer-ReactResTest.cmi : cp ../bs/src/hooks/useCounterReducer-ReactResTest.cmi
+o useCounterReducer-ReactResTest.cmj : cp ../bs/src/hooks/useCounterReducer-ReactResTest.cmj
+o useCounterReducer-ReactResTest.cmt : cp ../bs/src/hooks/useCounterReducer-ReactResTest.cmt
+o useCounterReducer.res : cp ../../src/hooks/useCounterReducer.res
+o button-ReactResTest.cmi : cp ../bs/src/components/button-ReactResTest.cmi
+o button-ReactResTest.cmj : cp ../bs/src/components/button-ReactResTest.cmj
+o button-ReactResTest.cmt : cp ../bs/src/components/button-ReactResTest.cmt
+o button.res : cp ../../src/components/button.res
+o ReactResTest.cmi : cp ../bs/ReactResTest.cmi
+o ReactResTest.cmj : cp ../bs/ReactResTest.cmj
+o ReactResTest.cmt : cp ../bs/ReactResTest.cmt
+build install.stamp : touch index-ReactResTest.cmi index-ReactResTest.cmj useCounterReducer-ReactResTest.cmi useCounterReducer-ReactResTest.cmj button-ReactResTest.cmi button-ReactResTest.cmj ReactResTest.cmi ReactResTest.cmj

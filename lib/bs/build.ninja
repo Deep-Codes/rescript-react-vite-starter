@@ -1,0 +1,24 @@
+rescript = 1
+g_finger := /Users/deepankarbhade/Desktop/vite-react/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /Users/deepankarbhade/Desktop/vite-react/node_modules/bs-platform/darwin/bsc.exe  -warn-error +101 -bs-v 9.0.2 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src/index.ast : astj ../../src/index.res
+rule deps
+  command = /Users/deepankarbhade/Desktop/vite-react/node_modules/bs-platform/darwin/bsb_helper.exe -hash cfaac56a132c45a315d28cfa32885609 -bs-ns ReactResTest $in
+  restat = 1
+o src/index.d : deps src/index.ast
+rule mij
+  command = /Users/deepankarbhade/Desktop/vite-react/node_modules/bs-platform/darwin/bsc.exe -bs-ns ReactResTest -I . -I src/components -I src/hooks -I src -I /Users/deepankarbhade/Desktop/vite-react/node_modules/@rescript/react/lib/ocaml   -warn-error +101 -bs-package-name react-res-test -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/index-ReactResTest.cmj src/index-ReactResTest.cmi ../../src/index.bs.js : mij src/index.ast
+o src/hooks/useCounterReducer.ast : astj ../../src/hooks/useCounterReducer.res
+o src/hooks/useCounterReducer.d : deps src/hooks/useCounterReducer.ast
+o src/hooks/useCounterReducer-ReactResTest.cmj src/hooks/useCounterReducer-ReactResTest.cmi ../../src/hooks/useCounterReducer.bs.js : mij src/hooks/useCounterReducer.ast
+o src/components/button.ast : astj ../../src/components/button.res
+o src/components/button.d : deps src/components/button.ast
+o src/components/button-ReactResTest.cmj src/components/button-ReactResTest.cmi ../../src/components/button.bs.js : mij src/components/button.ast
+rule build_package
+  command = /Users/deepankarbhade/Desktop/vite-react/node_modules/bs-platform/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  restat = 1
+o ReactResTest.cmi : build_package ReactResTest.mlmap

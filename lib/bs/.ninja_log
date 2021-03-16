@@ -1,0 +1,17 @@
+# ninja log v6
+0	19	1615880170650027861	src/components/button.ast	a579bd74ef15b5d0
+0	22	1615881400228103642	src/index.ast	3ee1f75bec838c76
+17	137	1615879922078506609	ReactResTest.cmi	6168aee453c032a0
+19	30	1615880170650027861	src/components/button.d	914bd0844c0de0de
+23	35	1615881400228103642	src/index.d	3fcb444d2cdc4530
+30	81	1615880170650027861	src/components/button-ReactResTest.cmj	df7e16810c174efa
+30	81	1615880170650027861	src/components/button-ReactResTest.cmi	df7e16810c174efa
+30	81	1615880170650027861	../../src/components/button.bs.js	df7e16810c174efa
+35	109	1615881400228103642	src/index-ReactResTest.cmj	73fe9c39a5b2136
+35	109	1615881400228103642	src/index-ReactResTest.cmi	73fe9c39a5b2136
+35	109	1615881400228103642	../../src/index.bs.js	73fe9c39a5b2136
+6	128	1615879922083069238	src/hooks/useCounterReducer.ast	e9b8c62c57aa1cea
+129	144	1615879922100886322	src/hooks/useCounterReducer.d	cec3f1bf7d8bd37d
+144	170	1615879922126934120	src/hooks/useCounterReducer-ReactResTest.cmj	8d6f748a01406a8f
+144	170	1615879922126934120	src/hooks/useCounterReducer-ReactResTest.cmi	8d6f748a01406a8f
+144	170	1615879922126934120	../../src/hooks/useCounterReducer.bs.js	8d6f748a01406a8f
