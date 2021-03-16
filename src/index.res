@@ -5,7 +5,6 @@ module App = {
   let make = () => {
     let (count, increment, decrement, reset) = UseCounterReducer.useCounterReducer(0)
     <div className="page">
-      <img src="../../logo.svg" />
       <h1> {React.string("Counter App")} </h1>
       <h1 className="value"> {React.string(count->Belt.Int.toString)} </h1>
       <Button text="Increment" onClick={_e => increment()} />

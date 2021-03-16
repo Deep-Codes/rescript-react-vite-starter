@@ -16,9 +16,7 @@ function Index$App(Props) {
   var increment = match[1];
   return React.createElement("div", {
               className: "page"
-            }, React.createElement("img", {
-                  src: "../../logo.svg"
-                }), React.createElement("h1", undefined, "Counter App"), React.createElement("h1", {
+            }, React.createElement("h1", undefined, "Counter App"), React.createElement("h1", {
                   className: "value"
                 }, String(match[0])), React.createElement(Button$ReactResTest.make, {
                   text: "Increment",

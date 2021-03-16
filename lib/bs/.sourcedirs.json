@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" , "src/hooks" , "src/components" ] , "pkgs" : [ [ "@rescript/react" , "/Users/deepankarbhade/Desktop/vite-react/node_modules/@rescript/react" ] ] , "generated" : [] }
+{ "dirs" : [ "src" , "src/hooks" , "src/components" ] , "pkgs" : [ [ "@rescript/react" , "/Users/deepankarbhade/Desktop/rescript-react-vite-starter/node_modules/@rescript/react" ] ] , "generated" : [] }
